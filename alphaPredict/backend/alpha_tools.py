@@ -1,6 +1,6 @@
 
 import re
-from alpha_exceptions import AlphaError
+from alphaPredict.alpha_exceptions import AlphaError
 
 
 

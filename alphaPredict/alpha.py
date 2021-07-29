@@ -26,7 +26,7 @@ from alphaPredict.backend.parrot_alpha import alpha_predict as _alpha_predict
 from alphaPredict.backend import alpha_tools as _alpha_tools
 from alphaPredict.backend.alpha_graph import graph as _graph
 # stuff for uniprot from backend
-from alpha_exceptions import AlphaError
+from alphaPredict.alpha_exceptions import AlphaError
 
 
 
