@@ -5,7 +5,7 @@ Predict confidence scores of alphaFold2
 """
 
 # Add imports here
-from .predict import *
+from .alpha import *
 
 # Handle versioneer
 from ._version import get_versions
