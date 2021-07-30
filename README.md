@@ -12,7 +12,7 @@ The confidence scores from the proteomes of *Rattus norvegicus*, *Danio rerio*, 
 
 ## How accurate is alphaPredict?
 
-The current BRNN has on average an 11% error. We are working on a V2 of the network that should reduce this error, but the training is going to take a few days. 
+The current BRNN has on average an 9% error. We are working on a V3 and V4 of the network that should reduce this error, but the training is going to take a few days for V3 and at least a week for V4. 
 
 
 ## Installation:

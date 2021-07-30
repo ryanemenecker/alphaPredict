@@ -24,18 +24,45 @@ from alphaPredict.backend import brnn_architecture
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 # Setting predictor equal to location of weighted values.
-predictor = "{}/networks/alpha_fold_networkV1.pt".format(PATH)
+predictor = "{}/networks/alpha_fold_networkV2_hs20_nL2_200e_beta5.pt".format(PATH)
 
 ##################################################################################################
 # hyperparameters used by when metapredict was trained. Manually setting them here for clarity.
 ##################################################################################################
 # This is defined externally so its read in and loaded one time on the initial import
 #
-
+'''
+network parameters for /networks/alpha_fold_networkV1.pt - 
 
 device = 'cpu'
 hidden_size = 10
 num_layers = 1
+dtype = 'residues'
+num_classes = 1
+encoding_scheme = 'onehot'
+input_size = 20
+problem_type = 'regression'
+
+network parameters for: 
+/networks/alpha_fold_networkV2_hs20_nL2_200e.pt  
+
+and for: 
+/networks/alpha_fold_networkV3_hs20_nL2_1000e.pt- 
+
+device = 'cpu'
+hidden_size = 20
+num_layers = 2
+dtype = 'residues'
+num_classes = 1
+encoding_scheme = 'onehot'
+input_size = 20
+problem_type = 'regression'
+'''
+
+
+device = 'cpu'
+hidden_size = 20
+num_layers = 2
 dtype = 'residues'
 num_classes = 1
 encoding_scheme = 'onehot'
