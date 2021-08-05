@@ -24,7 +24,7 @@ from alphaPredict.backend import brnn_architecture
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 # Setting predictor equal to location of weighted values.
-predictor = "{}/networks/alpha_fold_networkV2_hs20_nL2_200e_beta5.pt".format(PATH)
+predictor = "{}/networks/alpha_fold_networkV2.pt".format(PATH)
 
 ##################################################################################################
 # hyperparameters used by when metapredict was trained. Manually setting them here for clarity.
