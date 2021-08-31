@@ -24,7 +24,7 @@ from alphaPredict.backend import brnn_architecture
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 # Setting predictor equal to location of weighted values.
-predictor = "{}/networks/alpha_fold_networkV2.pt".format(PATH)
+predictor = "{}/networks/alpha_fold_networkV7_hs100_nL2_200e_all_prot.pt".format(PATH)
 
 ##################################################################################################
 # hyperparameters used by when metapredict was trained. Manually setting them here for clarity.
@@ -49,8 +49,48 @@ network parameters for:
 and for: 
 /networks/alpha_fold_networkV3_hs20_nL2_1000e.pt- 
 
+and for: 
+/networks/alpha_fold_networkV4_hs20_nL2_200e_all_prot.pt
+
 device = 'cpu'
 hidden_size = 20
+num_layers = 2
+dtype = 'residues'
+num_classes = 1
+encoding_scheme = 'onehot'
+input_size = 20
+problem_type = 'regression'
+
+and for: 
+/networks/alpha_fold_networkV5_hs40_nL5_200e_all_prot.pt
+
+device = 'cpu'
+hidden_size = 40
+num_layers = 5
+dtype = 'residues'
+num_classes = 1
+encoding_scheme = 'onehot'
+input_size = 20
+problem_type = 'regression'
+
+for 
+/networks/alpha_fold_networkV6_hs40_nL2_200e_all_prot.pt
+
+device = 'cpu'
+hidden_size = 40
+num_layers = 2
+dtype = 'residues'
+num_classes = 1
+encoding_scheme = 'onehot'
+input_size = 20
+problem_type = 'regression'
+
+
+for 
+/networks/alpha_fold_networkV7_hs100_nL2_200e_all_prot.pt
+
+device = 'cpu'
+hidden_size = 100
 num_layers = 2
 dtype = 'residues'
 num_classes = 1
@@ -61,8 +101,17 @@ problem_type = 'regression'
 
 
 device = 'cpu'
-hidden_size = 20
+#hidden_size = 20
+# changed to 40 for v5 and v6
+# changed to 100 for v7
+hidden_size = 100
+
+# 2 layers for v6, v1-4
 num_layers = 2
+
+# chaned to 5 for v5
+#num_layers = 5
+
 dtype = 'residues'
 num_classes = 1
 encoding_scheme = 'onehot'
