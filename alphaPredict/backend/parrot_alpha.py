@@ -162,7 +162,7 @@ def alpha_predict(sequence,  network=brnn_network, device=device, encoding_schem
     for i in output:
         # append each value (which is the predicted disorder value) to output values as a float.
         # round each value to six digits.
-        output_values.append(round(float(i), 4))
+        output_values.append(round(float(i[0]), 4))
 
     # return the prediction
     return output_values
