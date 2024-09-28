@@ -125,7 +125,7 @@ saved_weights = predictor
 # Initialize network architecture using previously defined hyperparameters
 ###############################################################################
 brnn_network = brnn_architecture.BRNN_MtM(input_size, hidden_size, num_layers, num_classes, device).to(device)
-brnn_network.load_state_dict(torch.load(saved_weights, map_location=torch.device(device)))
+brnn_network.load_state_dict(torch.load(saved_weights, weights_only=True, map_location=torch.device(device)))
 ###############################################################################
 
 
