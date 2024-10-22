@@ -5,11 +5,8 @@ Predict confidence scores of alphaFold2
 """
 
 # Add imports here
-from .alpha import *
+from alphaPredict.alpha import *
 
-# Handle versioneer
-from ._version import get_versions
-versions = get_versions()
-__version__ = versions['version']
-__git_revision__ = versions['full-revisionid']
-del get_versions, versions
+# Handle version
+from ._version import __version__
+

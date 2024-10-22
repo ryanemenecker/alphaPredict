@@ -7,6 +7,8 @@ __pycache__/
 *.so
 .DS_Store
 
+alphaPredict/_version.py
+
 # Distribution / packaging
 .Python
 env/
